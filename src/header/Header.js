@@ -15,8 +15,7 @@ const styles = theme => ({
         boxShadow: 0
     },
     appBar: {
-        opacity: 0.8,
-        backgroundColor: "#000"
+        background: "rgba(0, 0, 0, .7)"
     },
     grow: {
         flexGrow: 1

@@ -3,21 +3,124 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import { Typography } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import { defaultStyles } from "../app/theme";
+import CardMedia from "@material-ui/core/CardMedia"
+import Card from "@material-ui/core/Card";
 
 const styles = theme => ({
     root: {
         marginTop: theme.spacing.unit * 4,
         ...defaultStyles.container
+    },
+    card: {
+        height: 400,
+        color: theme.palette.common.white
+    },
+    cardMedia: {
+        width: '100%',
+        height: '100%',
+        position: 'relative',
+    },
+    cardMediaContent: {
+        position: 'absolute',
+        top:0,
+        right:0,
+        bottom: 0,
+        left: 0,
+        background: "rgba(0, 0, 0, .7)",
+        transition: theme.transitions.create(
+            ['background'],
+            { duration: theme.transitions.duration.standard }
+        ),
+        '&:hover': {
+            background: "rgba(0, 0, 0, .8)",
+        },
+        padding: theme.spacing.unit
+    },
+    titleContent: {
+        marginTop: theme.spacing.unit * 2
     }
 });
 
 const Service = ({ classes }) => (
     <div className={classes.root}>
-        <Typography variant={"h5"} paragraph={true} align={"center"}>Service</Typography>
+        <Typography variant={"h4"} paragraph={true} align={"center"}>Service</Typography>
         <Grid container={true} spacing={8}>
-            <Grid item={true}>123123</Grid>
-            <Grid item={true}>123123</Grid>
-            <Grid item={true}>123123</Grid>
+            <Grid item={true} xs={12} md={4}>
+                <Card className={classes.card}>
+                    <CardMedia
+                        image={'https://www.financialsamurai.com/wp-content/uploads/2018/08/management-consulting-pay.jpg'}
+                        className={classes.cardMedia}
+                    >
+                        <div className={classes.cardMediaContent}>
+                            <Typography
+                                align={"center"}
+                                color={"inherit"}
+                                variant={"h5"}
+                                className={classes.titleContent}
+                            >
+                                Development
+                            </Typography>
+                        </div>
+                    </CardMedia>
+                </Card>
+            </Grid>
+            <Grid item={true} xs={12} md={4}>
+                <Card className={classes.card}>
+                    <CardMedia
+                        image={'https://www.financialsamurai.com/wp-content/uploads/2018/08/management-consulting-pay.jpg'}
+                        className={classes.cardMedia}
+                    >
+                        <div className={classes.cardMediaContent}>
+                            <Typography
+                                align={"center"}
+                                color={"inherit"}
+                                variant={"h5"}
+                                className={classes.titleContent}
+                            >
+                                Administration
+                            </Typography>
+                        </div>
+                    </CardMedia>
+                </Card>
+            </Grid>
+            <Grid item={true} xs={12} md={4}>
+                <Card className={classes.card}>
+                    <CardMedia
+                        image={'https://www.financialsamurai.com/wp-content/uploads/2018/08/management-consulting-pay.jpg'}
+                        className={classes.cardMedia}
+                    >
+                        <div className={classes.cardMediaContent}>
+                            <Typography
+                                align={"center"}
+                                color={"inherit"}
+                                variant={"h5"}
+                                className={classes.titleContent}
+                            >
+                                Support
+                            </Typography>
+                        </div>
+                    </CardMedia>
+                </Card>
+            </Grid>
+            <Grid item={true} md={12}>
+                <Card className={classes.card}>
+                    <CardMedia
+                        image={'https://www.financialsamurai.com/wp-content/uploads/2018/08/management-consulting-pay.jpg'}
+                        className={classes.cardMedia}
+                    >
+                        <div className={classes.cardMediaContent}>
+                            <Typography
+                                align={"center"}
+                                color={"inherit"}
+                                variant={"h5"}
+                                className={classes.titleContent}
+                            >
+                                SEO
+                            </Typography>
+                        </div>
+                    </CardMedia>
+                </Card>
+            </Grid>
         </Grid>
     </div>
 );
