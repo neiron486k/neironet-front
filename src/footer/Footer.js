@@ -11,7 +11,7 @@ const styles = theme => ({
 });
 
 const Footer = ({ classes }) => (
-    <footer className={classes.footer}>
+    <footer className={classes.footer} color={"primary"}>
         <Toolbar variant={"dense"}>
             <Typography color={"inherit"} variant={"body1"}>© PrimeAid 2019</Typography>
         </Toolbar>

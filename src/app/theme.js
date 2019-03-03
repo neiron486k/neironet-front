@@ -5,8 +5,20 @@ const theme = createMuiTheme({
     palette: {
         type: 'light',
         primary: primary
-    }
+    },
+    typography: {
+        useNextVariants: true,
+    },
 });
+
+export const defaultStyles = {
+    container: {
+        margin: '0 auto',
+        padding: theme.spacing.unit,
+        width: '100%',
+        maxWidth: theme.breakpoints.values['lg']
+    }
+};
 
 
 export default theme;

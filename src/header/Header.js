@@ -31,7 +31,7 @@ const Header = ({classes}) => (
         >
             <AppBar position={"static"} color={"primary"} elevation={0} className={classes.appBar}>
                 <Toolbar>
-                    <Typography variant="h6" color="inherit" className={classes.grow}>
+                    <Typography variant={"h6"} color="inherit" className={classes.grow}>
                         PrimeAid
                     </Typography>
                     <nav>
