@@ -14,11 +14,10 @@ const theme = createMuiTheme({
 export const defaultStyles = {
     container: {
         margin: '0 auto',
-        padding: theme.spacing.unit,
+        padding: theme.spacing.unit * 2,
         width: '100%',
         maxWidth: theme.breakpoints.values['lg']
     }
 };
-
 
 export default theme;
