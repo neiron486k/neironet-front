@@ -8,6 +8,7 @@ const theme = createMuiTheme({
     },
     typography: {
         useNextVariants: true,
+        fontFamily: '"Play", "Roboto", "Helvetica", "Arial", sans-serif'
     },
 });
 

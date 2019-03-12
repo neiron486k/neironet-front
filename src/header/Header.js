@@ -7,6 +7,8 @@ import Typography from "@material-ui/core/es/Typography/Typography";
 import { Button } from "@material-ui/core";
 import PhoneIcon from "@material-ui/icons/Phone"
 import IconButton from "@material-ui/core/IconButton";
+import background from "./images/background.jpg";
+import logo from "./images/logo.png";
 
 const styles = theme => ({
     root: {
@@ -14,50 +16,42 @@ const styles = theme => ({
         height: 500
     },
     appBar: {
+        display: 'flex',
         background: 'rgba(0, 0, 0, .7)'
     },
-    brandBar: {},
-    navBar: {},
-    textBar: {
+    brand: {
         flexGrow: 1,
-        textAlign: 'center'
+        marginLeft: theme.spacing.unit * 2
     },
-    icon: {
-        marginRight: 10,
-    },
-    button: {
-        fontSize: '1.2em'
+    logo: {
+        width: 50,
+        height: 50
     }
 });
 
 const Header = ({ classes }) => (
-    <div>
-        <CardMedia
-            image={'https://www.financialsamurai.com/wp-content/uploads/2018/08/management-consulting-pay.jpg'}
-            className={classes.root}
-        >
-            <AppBar position={"static"} color={"primary"} elevation={0} className={classes.appBar}>
-                <Toolbar>
-                    <div className={classes.brandBar}>
-                        <Typography variant={"h6"} color="inherit">
-                            PrimeAid
-                        </Typography>
-                    </div>
-                    <div className={classes.textBar}>
-                        <Button size="large" className={classes.button} color={"inherit"}>
-                            <PhoneIcon className={classes.icon} />
-                            +7 (921) 359-44-94
-                        </Button>
-                    </div>
-                    <nav className={classes.navBar}>
-                        <Button color="inherit">Service</Button>
-                        <Button color="inherit">About</Button>
-                        <Button color="inherit">Contacts</Button>
-                    </nav>
-                </Toolbar>
-            </AppBar>
-        </CardMedia>
-    </div>
+    <CardMedia
+        image={background}
+        className={classes.root}
+    >
+        <AppBar position={"static"} elevation={0} className={classes.appBar}>
+            <Toolbar>
+                <CardMedia
+                    image={logo}
+                    className={classes.logo}
+                />
+                <div className={classes.brand}>
+                    <Typography variant={"h6"} color="inherit">PrimeAid</Typography>
+                    <Typography variant={"caption"} color="inherit">Return result to profit</Typography>
+                </div>
+                <nav className={classes.nav}>
+                    <Button color="inherit">Service</Button>
+                    <Button color="inherit">About</Button>
+                    <Button color="inherit">Contacts</Button>
+                </nav>
+            </Toolbar>
+        </AppBar>
+    </CardMedia>
 );
 
 export default withStyles(styles)(Header)

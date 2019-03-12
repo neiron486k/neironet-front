@@ -4,6 +4,8 @@ import './index.css';
 import App from './app/App';
 import * as serviceWorker from './serviceWorker';
 import 'typeface-roboto';
+import 'typeface-oxygen';
+import 'typeface-play';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
