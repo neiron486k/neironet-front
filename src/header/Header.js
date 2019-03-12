@@ -13,7 +13,9 @@ import logo from "./images/logo.png";
 const styles = theme => ({
     root: {
         width: '100%',
-        height: 500
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        height: 600
     },
     appBar: {
         display: 'flex',
@@ -33,12 +35,14 @@ const Header = ({ classes }) => (
     <CardMedia
         image={background}
         className={classes.root}
+        title={'background'}
     >
         <AppBar position={"static"} elevation={0} className={classes.appBar}>
             <Toolbar>
                 <CardMedia
                     image={logo}
                     className={classes.logo}
+                    title={'logo'}
                 />
                 <div className={classes.brand}>
                     <Typography variant={"h6"} color="inherit">PrimeAid</Typography>
