@@ -6,6 +6,7 @@ import theme from "./theme"
 import Footer from "../footer/Footer";
 import Service from "../service/Service";
 import Work from "../work/Work";
+import About from "../about/About";
 
 class App extends Component {
     render() {
@@ -13,6 +14,7 @@ class App extends Component {
             <MuiThemeProvider theme={theme}>
                 <CssBaseline />
                 <Header />
+                <About />
                 <Work />
                 <Service />
                 <Footer />
