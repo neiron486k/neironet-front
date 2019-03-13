@@ -17,7 +17,7 @@ export const defaultStyles = {
         margin: '0 auto',
         padding: theme.spacing.unit * 2,
         width: '100%',
-        maxWidth: theme.breakpoints.values['lg']
+        maxWidth: theme.breakpoints.values['xl']
     }
 };
 

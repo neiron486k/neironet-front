@@ -8,7 +8,7 @@ import Card from "@material-ui/core/Card";
 
 const styles = theme => ({
     root: {
-        marginTop: theme.spacing.unit * 4,
+        marginTop: theme.spacing.unit * 2,
         ...defaultStyles.container
     },
     card: {
