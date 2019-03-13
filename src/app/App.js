@@ -5,6 +5,7 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import theme from "./theme"
 import Footer from "../footer/Footer";
 import Service from "../service/Service";
+import Work from "../work/Work";
 
 class App extends Component {
     render() {
@@ -12,6 +13,7 @@ class App extends Component {
             <MuiThemeProvider theme={theme}>
                 <CssBaseline />
                 <Header />
+                <Work />
                 <Service />
                 <Footer />
             </MuiThemeProvider>

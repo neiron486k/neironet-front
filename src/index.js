@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import 'typeface-roboto';
 import 'typeface-oxygen';
 import 'typeface-play';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
