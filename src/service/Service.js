@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import { defaultStyles } from "../app/theme";
 import CardMedia from "@material-ui/core/CardMedia"
 import Card from "@material-ui/core/Card";
+import Divider from '@material-ui/core/Divider';
 
 const styles = theme => ({
     root: {
@@ -38,14 +39,20 @@ const styles = theme => ({
     },
     titleContent: {
         marginTop: theme.spacing.unit * 2
+    },
+    divider: {
+        height: 2,
+        width: 200,
+        margin: `${theme.spacing.unit}px auto ${theme.spacing.unit * 2}px auto`
     }
 });
 
 const Service = ({ classes }) => (
     <div className={classes.root}>
-        <Typography variant={"h4"} paragraph={true} align={"center"}>Service</Typography>
+        <Typography variant={"h4"} align={"center"}>Service</Typography>
+        <Divider className={classes.divider} />
         <Grid container={true} spacing={8}>
-            <Grid item={true} xs={12} md={4}>
+            <Grid item={true} xs={12} md={3}>
                 <Card className={classes.card}>
                     <CardMedia
                         image={'https://www.financialsamurai.com/wp-content/uploads/2018/08/management-consulting-pay.jpg'}
@@ -74,7 +81,7 @@ const Service = ({ classes }) => (
                     </CardMedia>
                 </Card>
             </Grid>
-            <Grid item={true} xs={12} md={4}>
+            <Grid item={true} xs={12} md={3}>
                 <Card className={classes.card}>
                     <CardMedia
                         image={'https://www.financialsamurai.com/wp-content/uploads/2018/08/management-consulting-pay.jpg'}
@@ -103,7 +110,7 @@ const Service = ({ classes }) => (
                     </CardMedia>
                 </Card>
             </Grid>
-            <Grid item={true} xs={12} md={4}>
+            <Grid item={true} xs={12} md={3}>
                 <Card className={classes.card}>
                     <CardMedia
                         image={'https://www.financialsamurai.com/wp-content/uploads/2018/08/management-consulting-pay.jpg'}
@@ -132,7 +139,7 @@ const Service = ({ classes }) => (
                     </CardMedia>
                 </Card>
             </Grid>
-            <Grid item={true} xs={12} md={12}>
+            <Grid item={true} xs={12} md={3}>
                 <Card className={classes.card}>
                     <CardMedia
                         image={'https://www.financialsamurai.com/wp-content/uploads/2018/08/management-consulting-pay.jpg'}
