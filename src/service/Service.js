@@ -2,7 +2,6 @@ import React from 'react';
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Typography } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
-import { defaultStyles } from "../app/theme";
 import CardMedia from "@material-ui/core/CardMedia"
 import Card from "@material-ui/core/Card";
 import Section from "../common/Section";

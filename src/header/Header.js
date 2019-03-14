@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import CardMedia from "@material-ui/core/CardMedia"
 import Toolbar from '@material-ui/core/Toolbar';
@@ -20,11 +20,18 @@ const styles = theme => ({
         width: '100%',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
-        height: 600,
+        // height: 600,
         overflow: 'hidden'
+    },
+    dotted: {
+        padding: '2.25em 1.6875em',
+        backgroundImage: 'repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%)',
+        backgroundSize: '3px 3px',
+        width: '100%'
     },
     appBar: {
         display: 'flex',
+        // background: 'none',
         background: 'rgba(0, 0, 0, .7)'
     },
     brand: {
@@ -74,60 +81,62 @@ const Header = ({ classes }) => {
             className={classes.root}
             title={'background'}
         >
-            <AppBar position={'fixed'} elevation={0} className={classes.appBar}>
-                <Toolbar variant={variant}>
-                    <CardMedia
-                        image={logo}
-                        className={classes.logo}
-                        title={'logo'}
-                    />
-                    <div className={classes.brand}>
-                        <Typography variant={"h6"} color="inherit">PrimeAid</Typography>
-                        <Typography variant={"caption"} color="inherit">Return result to profit</Typography>
-                    </div>
-                    <nav className={classes.nav}>
-                        <Button color="inherit">Service</Button>
-                        <Button color="inherit">About</Button>
-                        <Button color="inherit">Contacts</Button>
-                    </nav>
-                </Toolbar>
-            </AppBar>
-            <div className={classes.container}>
-                <List>
-                    <ListItem>
-                        <ListItemIcon className={classes.icon}>
-                            <DoneIcon />
-                        </ListItemIcon>
-                        <ListItemText
-                            classes={{
-                                primary: classes.text,
-                            }}
-                            primary="Developing"
-                            secondary={"php, python, lua, nodejs, js..."}
+            <div className={classes.dotted}>
+                <AppBar position={'fixed'} elevation={0} className={classes.appBar}>
+                    <Toolbar variant={variant}>
+                        <CardMedia
+                            image={logo}
+                            className={classes.logo}
+                            title={'logo'}
                         />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemIcon className={classes.icon}>
-                            <DoneIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Administration" secondary={"unix, linux, windows, networks..."}
-                                      classes={{ primary: classes.text }} />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemIcon className={classes.icon}>
-                            <DoneIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Consultation" secondary={"technologies, storing, etc..."}
-                                      classes={{ primary: classes.text }} />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemIcon className={classes.icon}>
-                            <DoneIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Guarantee" secondary={"quality, times"}
-                                      classes={{ primary: classes.text }} />
-                    </ListItem>
-                </List>
+                        <div className={classes.brand}>
+                            <Typography variant={"h6"} color="inherit">PrimeAid</Typography>
+                            <Typography variant={"caption"} color="inherit">Return result to profit</Typography>
+                        </div>
+                        <nav className={classes.nav}>
+                            <Button color="inherit">Service</Button>
+                            <Button color="inherit">About</Button>
+                            <Button color="inherit">Contacts</Button>
+                        </nav>
+                    </Toolbar>
+                </AppBar>
+                <div className={classes.container}>
+                    <List>
+                        <ListItem>
+                            <ListItemIcon className={classes.icon}>
+                                <DoneIcon />
+                            </ListItemIcon>
+                            <ListItemText
+                                classes={{
+                                    primary: classes.text,
+                                }}
+                                primary="Developing"
+                                secondary={"php, python, lua, nodejs, js..."}
+                            />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemIcon className={classes.icon}>
+                                <DoneIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Administration" secondary={"unix, linux, windows, networks..."}
+                                          classes={{ primary: classes.text }} />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemIcon className={classes.icon}>
+                                <DoneIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Consultation" secondary={"technologies, storing, etc..."}
+                                          classes={{ primary: classes.text }} />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemIcon className={classes.icon}>
+                                <DoneIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Guarantee" secondary={"quality, times"}
+                                          classes={{ primary: classes.text }} />
+                        </ListItem>
+                    </List>
+                </div>
             </div>
         </CardMedia>
     )
