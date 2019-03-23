@@ -35,7 +35,7 @@ const styles = theme => ({
         // overflow: 'hidden'
     },
     wrapper: {
-        padding: theme.spacing.unit
+        padding: theme.spacing.unit / 2
     },
     cardMedia: {
         width: '100%',
@@ -58,8 +58,10 @@ const Work = ({ classes }) => {
     const settings = {
         dots: true,
         arrows: false,
-        infinite: false,
-        speed: 500,
+        infinite: true,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 6000,
         slidesToShow: 4,
         slidesToScroll: 1
     };
