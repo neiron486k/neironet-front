@@ -4,7 +4,6 @@ import Section from "../common/Section";
 import Slider from "react-slick";
 import CardMedia from '@material-ui/core/CardMedia';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import { Typography } from "@material-ui/core";
 
 const slides = [
@@ -14,11 +13,11 @@ const slides = [
     },
     {
         image: 'https://avatars.mds.yandex.net/get-pdb/49816/167fbefc-4bc6-4ca1-805c-69d08b200400/s1200',
-        text: 'Cat',
+        text: 'Awesome cat',
     },
     {
         image: 'https://avatars.mds.yandex.net/get-pdb/49816/167fbefc-4bc6-4ca1-805c-69d08b200400/s1200',
-        text: 'Cat',
+        text: 'Pretty cat',
     },
     {
         image: 'https://avatars.mds.yandex.net/get-pdb/49816/167fbefc-4bc6-4ca1-805c-69d08b200400/s1200',
