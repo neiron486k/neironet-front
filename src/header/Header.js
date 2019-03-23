@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import CardMedia from "@material-ui/core/CardMedia"
 import Toolbar from '@material-ui/core/Toolbar';
@@ -20,7 +20,6 @@ const styles = theme => ({
         width: '100%',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
-        // height: 600,
         overflow: 'hidden'
     },
     dotted: {
@@ -31,7 +30,6 @@ const styles = theme => ({
     },
     appBar: {
         display: 'flex',
-        // background: 'none',
         background: 'rgba(0, 0, 0, .7)'
     },
     brand: {
@@ -56,25 +54,6 @@ const styles = theme => ({
 });
 
 const Header = ({ classes }) => {
-    const [variant, setVariant] = useState('regular');
-
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            let scrollPosition = window.scrollY;
-
-            if (scrollPosition !== 0) {
-                setVariant('dense')
-            } else {
-                setVariant('regular')
-            }
-        });
-
-        return () => {
-            window.removeEventListener('scroll', () => {
-            });
-        }
-    });
-
     return (
         <CardMedia
             image={background}
@@ -83,7 +62,7 @@ const Header = ({ classes }) => {
         >
             <div className={classes.dotted}>
                 <AppBar position={'fixed'} elevation={0} className={classes.appBar}>
-                    <Toolbar variant={variant}>
+                    <Toolbar variant={"regular"}>
                         <CardMedia
                             image={logo}
                             className={classes.logo}

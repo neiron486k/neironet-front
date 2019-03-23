@@ -5,10 +5,12 @@ import { Typography } from "@material-ui/core";
 
 const styles = theme => ({
     root: {
+        // backgroundColor: theme.palette.primary[50],
         backgroundColor: theme.palette.primary[50],
+        marginTop: -20,
         paddingBottom: theme.spacing.unit * 6,
-        clipPath: 'polygon(0 0, 100% 0, 100% 60%, 0% 100%)',
-        webkitClipPath: 'polygon(0 0, 100% 0, 100% 60%, 0% 100%)',
+        clipPath: 'polygon(0 10%, 60% 10%, 70% 0, 70% 10%, 100% 10%, 100% 60%, 0 100%)',
+        webkitClipPath: 'polygon(0 10%, 60% 10%, 70% 0, 70% 10%, 100% 10%, 100% 60%, 0 100%)',
         [theme.breakpoints.down('sm')]: {
             clipPath: 'none',
             webkitClipPath: 'none',
@@ -16,6 +18,7 @@ const styles = theme => ({
         },
     },
     text: {
+        marginTop: 15,
         color: theme.palette.grey[600]
     }
 });
