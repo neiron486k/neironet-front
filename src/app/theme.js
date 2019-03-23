@@ -1,10 +1,10 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import primary from "@material-ui/core/colors/blue"
+import primary from "@material-ui/core/colors/blueGrey"
 
 const theme = createMuiTheme({
     palette: {
         type: 'light',
-        primary: primary
+        primary: primary,
     },
     typography: {
         useNextVariants: true,

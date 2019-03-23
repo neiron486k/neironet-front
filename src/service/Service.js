@@ -7,7 +7,17 @@ import Card from "@material-ui/core/Card";
 import Section from "../common/Section";
 
 const styles = theme => ({
-    root: {},
+    root: {
+        backgroundColor: theme.palette.primary[50],
+        paddingTop: theme.spacing.unit * 6,
+        clipPath: 'polygon(0 0%, 100% 20%, 100% 100%, 0% 100%)',
+        webkitClipPath: 'polygon(0 0%, 100% 20%, 100% 100%, 0% 100%)',
+        [theme.breakpoints.down('sm')]: {
+            clipPath: 'none',
+            webkitClipPath: 'none',
+            paddingTop: 0,
+        },
+    },
     card: {
         height: 400,
         color: theme.palette.common.white
@@ -40,7 +50,12 @@ const styles = theme => ({
         height: 2,
         width: 200,
         margin: `${theme.spacing.unit}px auto ${theme.spacing.unit * 2}px auto`
-    }
+    },
+    leftFill: {
+        backgroundColor: "red",
+        height: 400,
+
+    },
 });
 
 const Service = ({ classes }) => (

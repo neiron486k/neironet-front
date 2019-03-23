@@ -7,6 +7,15 @@ import Footer from "../footer/Footer";
 import Service from "../service/Service";
 import Work from "../work/Work";
 import About from "../about/About";
+import withStyle from "@material-ui/core/styles/withStyles"
+
+const styles = theme => ({
+    '@global': {
+        body: {
+            backgroundColor: theme.palette.common.white,
+        },
+    },
+});
 
 class App extends Component {
     render() {
@@ -23,4 +32,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default withStyle(styles)(App);

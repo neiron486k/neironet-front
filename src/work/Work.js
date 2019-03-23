@@ -32,7 +32,8 @@ const slides = [
 
 const styles = theme => ({
     root: {
-        // background: theme.palette.primary[50]
+        // position: 'relative',
+        // overflow: 'hidden'
     },
     wrapper: {
         padding: theme.spacing.unit
