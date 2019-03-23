@@ -43,18 +43,19 @@ const styles = theme => ({
         height: 250,
         position: 'relative'
     },
-    cardContent: {
-        background: 'rgba(0, 0, 0, .7)',
+    content: {
+        background: 'rgba(0, 0, 0, 1)',
         position: 'absolute',
         bottom: 0,
         right: 0,
-        left: 0,
-        color: theme.palette.common.white
-    }
+        color: theme.palette.common.white,
+        clipPath: 'polygon(0 15%, 100% 0, 100% 100%, 0 100%)',
+        webkitClipPath: 'polygon(0 15%, 100% 0, 100% 100%, 0 100%)',
+        padding: theme.spacing.unit
+    },
 });
 
 const Work = ({ classes }) => {
-
     const settings = {
         dots: true,
         arrows: false,
@@ -77,11 +78,11 @@ const Work = ({ classes }) => {
                                         image={item.image}
                                         className={classes.cardMedia}
                                     >
-                                        <CardContent className={classes.cardContent}>
+                                        <div className={classes.content}>
                                             <Typography variant={"body1"} color={"inherit"} align={"center"}>
                                                 {item.text}
                                             </Typography>
-                                        </CardContent>
+                                        </div>
                                     </CardMedia>
                                 </Card>
                             </div>
