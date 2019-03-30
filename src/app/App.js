@@ -8,6 +8,7 @@ import Service from "../service/Service";
 import Work from "../work/Work";
 import About from "../about/About";
 import withStyle from "@material-ui/core/styles/withStyles"
+import Review from "../Review/Review";
 
 const styles = theme => ({
     '@global': {
@@ -26,6 +27,7 @@ class App extends Component {
                 <About />
                 <Work />
                 <Service />
+                <Review />
                 <Footer />
             </MuiThemeProvider>
         );
