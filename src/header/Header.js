@@ -15,6 +15,7 @@ import logo from "./images/logo.png";
 import DoneIcon from '@material-ui/icons/Done';
 import green from '@material-ui/core/colors/green'
 import Section from "../common/Section";
+import Menu from "./Menu";
 
 const styles = theme => ({
     root: {
@@ -66,6 +67,7 @@ const Header = ({ classes }) => {
             image={background}
             className={classes.root}
             title={'background'}
+            id={"home"}
         >
             <div className={classes.dotted}>
                 <AppBar position={'fixed'} elevation={0} className={classes.appBar}>
@@ -79,13 +81,7 @@ const Header = ({ classes }) => {
                             <Typography variant={"h6"} color="inherit">PrimeAid</Typography>
                             <Typography variant={"caption"} color="inherit">Return result to profit</Typography>
                         </div>
-                        <nav className={classes.nav}>
-                            <Button color="inherit">About</Button>
-                            <Button color="inherit">Works</Button>
-                            <Button color="inherit">Services</Button>
-                            <Button color="inherit">Reviews</Button>
-                            <Button color="inherit">Contacts</Button>
-                        </nav>
+                        <Menu />
                     </Toolbar>
                 </AppBar>
                 <Section className={classes.container}>

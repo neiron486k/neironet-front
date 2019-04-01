@@ -15,7 +15,7 @@ const styles = theme => ({
 });
 
 const Contact = ({ classes }) => (
-    <div className={classes.root}>
+    <div className={classes.root} id={"contact"}>
         <Section title={"Contacts"}>
             <Grid container={true} spacing={8}>
                 <Grid item={true} sm={4}></Grid>

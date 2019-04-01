@@ -11,7 +11,7 @@ const styles = theme => ({
 });
 
 const About = ({ classes }) => (
-    <div className={classes.root}>
+    <div className={classes.root} id={"about"}>
         <Section>
             <Typography variant={"h6"} component={"h2"} align={"center"}>
                 Мы - восококвалифицированная команда в области веб разработок, которая позаботиться обо всех сложных

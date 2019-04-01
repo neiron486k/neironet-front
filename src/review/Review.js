@@ -44,7 +44,7 @@ const reviews = [
 ];
 
 const Review = ({ classes }) => (
-    <div className={classes.root}>
+    <div className={classes.root} id={"review"}>
         <Section title={"Review"}>
             {reviews.map((item, index) => (
                 <div key={index}>

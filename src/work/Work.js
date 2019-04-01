@@ -69,7 +69,7 @@ const Work = ({ classes }) => {
     };
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} id={"work"}>
             <Section title={'Work'} className={classes.section}>
                 <Slider {...settings}>
                     {slides.map((item, index) => {
