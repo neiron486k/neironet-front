@@ -40,7 +40,7 @@ const styles = theme => ({
         height: 50
     },
     textPrimary: {
-        fontSize: '2em',
+        fontSize: '1.5em',
         fontWeight: 'bold',
         color: theme.palette.common.white
     },
