@@ -10,12 +10,14 @@ import "slick-carousel/slick/slick-theme.css";
 import './index.css';
 import { Provider } from "react-redux"
 import store from "./app/store";
-
-ReactDOM.render(<App />, document.getElementById('root'));
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import theme from "./app/theme"
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <MuiThemeProvider theme={theme}>
+            <App />
+        </MuiThemeProvider>
     </Provider>,
     document.getElementById('root')
 );

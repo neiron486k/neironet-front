@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from "@material-ui/core/styles/withStyles"
 import Section from "../common/Section";
-import yellow from "@material-ui/core/colors/yellow"
+import ContactForm from "./ContactForm";
+import { Grid, Typography } from '@material-ui/core'
+
+// import yellow from "@material-ui/core/colors/yellow"
 
 const styles = theme => ({
     root: {
@@ -11,14 +14,22 @@ const styles = theme => ({
     }
 });
 
-const Contact = ({classes}) => (
+const Contact = ({ classes }) => (
     <div className={classes.root}>
         <Section title={"Contacts"}>
+            <Grid container={true} spacing={8}>
+                <Grid item={true} sm={4}>1</Grid>
+                <Grid item={true} sm={4}>2</Grid>
+                <Grid item={true} sm={4}>
+                    <Typography align={"center"} variant={"h6"}>Оставить заявку</Typography>
+                    <ContactForm />
+                </Grid>
+            </Grid>
         </Section>
     </div>
 );
 
-Contact.propType = {
+Contact.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
