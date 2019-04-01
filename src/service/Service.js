@@ -10,14 +10,6 @@ import Section from "../common/Section";
 const styles = theme => ({
     root: {
         backgroundColor: theme.palette.primary[50],
-        paddingTop: theme.spacing.unit * 6,
-        clipPath: 'polygon(0 0%, 100% 20%, 100% 100%, 0% 100%)',
-        webkitClipPath: 'polygon(0 0%, 100% 20%, 100% 100%, 0% 100%)',
-        [theme.breakpoints.down('sm')]: {
-            clipPath: 'none',
-            webkitClipPath: 'none',
-            paddingTop: 0,
-        },
     },
     card: {
         height: 400,

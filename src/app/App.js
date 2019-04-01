@@ -9,12 +9,13 @@ import Work from "../work/Work";
 import About from "../about/About";
 import withStyle from "@material-ui/core/styles/withStyles"
 import Review from "../Review/Review";
+import Contact from "../contact/Contact";
 
 const styles = theme => ({
     '@global': {
         body: {
             backgroundColor: theme.palette.common.white,
-        },
+        }
     },
 });
 
@@ -28,6 +29,7 @@ class App extends Component {
                 <Work />
                 <Service />
                 <Review />
+                <Contact />
                 <Footer />
             </MuiThemeProvider>
         );

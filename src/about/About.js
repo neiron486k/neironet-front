@@ -3,20 +3,10 @@ import PropTypes from 'prop-types'
 import withStyles from '@material-ui/core/styles/withStyles';
 import Section from "../common/Section";
 import { Typography } from "@material-ui/core";
-// import yellow from "@material-ui/core/colors/yellow"
 
 const styles = theme => ({
     root: {
-        // backgroundColor: yellow[700],
-        backgroundColor: theme.palette.grey[200],
-        paddingBottom: theme.spacing.unit * 6,
-        clipPath: 'polygon(0 0, 100% 0, 100% 60%, 0% 100%)',
-        webkitClipPath: 'polygon(0 0, 100% 0, 100% 60%, 0% 100%)',
-        [theme.breakpoints.down('sm')]: {
-            clipPath: 'none',
-            webkitClipPath: 'none',
-            paddingBottom: 0,
-        },
+        backgroundColor: theme.palette.primary[50],
     },
 });
 

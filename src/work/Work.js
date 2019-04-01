@@ -32,8 +32,9 @@ const slides = [
 
 const styles = theme => ({
     root: {
-        // position: 'relative',
-        // overflow: 'hidden'
+    },
+    section: {
+        paddingBottom: theme.spacing.unit * 4
     },
     wrapper: {
         padding: theme.spacing.unit / 2
@@ -69,7 +70,7 @@ const Work = ({ classes }) => {
 
     return (
         <div className={classes.root}>
-            <Section title={'Work'}>
+            <Section title={'Work'} className={classes.section}>
                 <Slider {...settings}>
                     {slides.map((item, index) => {
                         return (
