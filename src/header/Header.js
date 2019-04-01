@@ -46,7 +46,7 @@ const styles = theme => ({
         color: theme.palette.common.white
     },
     textSecondary: {
-        color: theme.palette.common.white
+        color: theme.palette.grey[300]
     },
     icon: {
         color: green['A700'],
