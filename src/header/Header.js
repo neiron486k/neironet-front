@@ -14,14 +14,12 @@ import background from "./images/background.jpg";
 import logo from "./images/logo.png";
 import DoneIcon from '@material-ui/icons/Done';
 import green from '@material-ui/core/colors/green'
-import { defaultStyles } from '../app/theme'
+import Section from "../common/Section";
 
 const styles = theme => ({
     root: {
-        width: '100%',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
-        overflow: 'hidden'
     },
     dotted: {
         padding: '2.25em 1.6875em',
@@ -41,16 +39,24 @@ const styles = theme => ({
         width: 50,
         height: 50
     },
-    text: {
+    textPrimary: {
         fontSize: '2em',
         fontWeight: 'bold',
+        color: theme.palette.common.white
+    },
+    textSecondary: {
+        color: theme.palette.common.white
     },
     icon: {
         color: green['A700'],
     },
     container: {
-        ...defaultStyles.container,
         marginTop: 50
+    },
+    list: {
+        background: 'rgba(0, 0, 0, .6)',
+        display: 'inline-block',
+        borderRadius: theme.shape.borderRadius,
     }
 });
 
@@ -82,15 +88,16 @@ const Header = ({ classes }) => {
                         </nav>
                     </Toolbar>
                 </AppBar>
-                <div className={classes.container}>
-                    <List>
+                <Section className={classes.container}>
+                    <List className={classes.list}>
                         <ListItem>
                             <ListItemIcon className={classes.icon}>
                                 <DoneIcon />
                             </ListItemIcon>
                             <ListItemText
                                 classes={{
-                                    primary: classes.text,
+                                    primary: classes.textPrimary,
+                                    secondary: classes.textSecondary,
                                 }}
                                 primary="Developing"
                                 secondary={"php, python, lua, nodejs, js..."}
@@ -100,25 +107,43 @@ const Header = ({ classes }) => {
                             <ListItemIcon className={classes.icon}>
                                 <DoneIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Administration" secondary={"unix, linux, windows, networks..."}
-                                          classes={{ primary: classes.text }} />
+                            <ListItemText
+                                primary="Administration"
+                                secondary={"unix, linux, windows, networks..."}
+                                classes={{
+                                    primary: classes.textPrimary,
+                                    secondary: classes.textSecondary,
+                                }}
+                            />
                         </ListItem>
                         <ListItem>
                             <ListItemIcon className={classes.icon}>
                                 <DoneIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Consultation" secondary={"technologies, storing, etc..."}
-                                          classes={{ primary: classes.text }} />
+                            <ListItemText
+                                primary="Consultation"
+                                secondary={"technologies, storing, etc..."}
+                                classes={{
+                                    primary: classes.textPrimary,
+                                    secondary: classes.textSecondary,
+                                }}
+                            />
                         </ListItem>
                         <ListItem>
                             <ListItemIcon className={classes.icon}>
                                 <DoneIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Guarantee" secondary={"quality, times"}
-                                          classes={{ primary: classes.text }} />
+                            <ListItemText
+                                primary="Guarantee"
+                                secondary={"quality, times"}
+                                classes={{
+                                    primary: classes.textPrimary,
+                                    secondary: classes.textSecondary,
+                                }}
+                            />
                         </ListItem>
                     </List>
-                </div>
+                </Section>
             </div>
         </CardMedia>
     )
