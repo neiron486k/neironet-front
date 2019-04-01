@@ -5,7 +5,6 @@ import CardMedia from "@material-ui/core/CardMedia"
 import Toolbar from '@material-ui/core/Toolbar';
 import AppBar from '@material-ui/core/AppBar';
 import Typography from "@material-ui/core/es/Typography/Typography";
-import { Button } from "@material-ui/core";
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -16,6 +15,7 @@ import DoneIcon from '@material-ui/icons/Done';
 import green from '@material-ui/core/colors/green'
 import Section from "../common/Section";
 import Menu from "./Menu";
+import PhoneIcon from '@material-ui/icons/Phone'
 
 const styles = theme => ({
     root: {
@@ -48,6 +48,10 @@ const styles = theme => ({
     textSecondary: {
         color: theme.palette.grey[300]
     },
+    a: {
+        textDecoration: 'none',
+        color: theme.palette.common.white
+    },
     icon: {
         color: green['A700'],
     },
@@ -58,6 +62,14 @@ const styles = theme => ({
         background: 'rgba(0, 0, 0, .6)',
         display: 'inline-block',
         borderRadius: theme.shape.borderRadius,
+    },
+    phone: {
+        display: 'flex',
+        alignItems: 'center',
+        marginRight: theme.spacing.unit * 2
+    },
+    phoneIcon: {
+        marginRight: theme.spacing.unit
     }
 });
 
@@ -81,6 +93,12 @@ const Header = ({ classes }) => {
                             <Typography variant={"h6"} color="inherit">PrimeAid</Typography>
                             <Typography variant={"caption"} color="inherit">Return result to profit</Typography>
                         </div>
+                        <Typography color="inherit" variant={"body1"} className={classes.phone}>
+                            <PhoneIcon className={classes.phoneIcon} />
+                            <a href="tel:+79213594494" className={classes.a} color={"inherit"}>
+                                +7 (921) 359-44-94
+                            </a>
+                        </Typography>
                         <Menu />
                     </Toolbar>
                 </AppBar>
