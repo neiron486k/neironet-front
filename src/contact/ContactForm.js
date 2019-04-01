@@ -12,8 +12,8 @@ const styles = theme => ({
     }
 });
 
-let ContactForm = ({ classes }) => (
-    <form className={classes.root}>
+let ContactForm = ({ classes, handleSubmit }) => (
+    <form className={classes.root} onSubmit={handleSubmit((values) => console.log(values))}>
         <Field
             name="name"
             label={"name"}
@@ -27,7 +27,7 @@ let ContactForm = ({ classes }) => (
             name="phone"
             label={"phone"}
             component={renderTextField}
-            type="text"
+            type="tel"
             variant={"outlined"}
             margin="dense"
             required={true}
@@ -43,12 +43,13 @@ let ContactForm = ({ classes }) => (
             rows={5}
             multiline={true}
         />
-        <Button color={"primary"} variant={"contained"}>Send</Button>
+        <Button color={"primary"} variant={"contained"} type={"submit"}>Send</Button>
     </form>
 );
 
 ContactForm.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    handleSubmit: PropTypes.func.isRequired
 };
 
 ContactForm = reduxForm({
