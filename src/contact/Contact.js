@@ -13,12 +13,9 @@ import EmailIcon from '@material-ui/icons/Email';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSkype, faTelegram } from '@fortawesome/free-brands-svg-icons'
 
-// import yellow from "@material-ui/core/colors/yellow"
-
 const styles = theme => ({
     root: {
         backgroundColor: theme.palette.primary[50]
-        // backgroundColor: yellow[800]
     }
 });
 

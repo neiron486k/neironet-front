@@ -59,7 +59,6 @@ const Menu = ({classes}) => {
                     offset={item.offset}
                     duration={500}
                     key={index}
-                    isDynamic={true}
                     variant={"Button"}
                 >
                     <Button color="inherit">{item.label}</Button>
