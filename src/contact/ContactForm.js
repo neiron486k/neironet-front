@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles from "@material-ui/core/styles/withStyles"
 import { Field, reduxForm } from 'redux-form'
 import renderTextField from '../utils/renderTextField';
+import { Button } from "@material-ui/core";
 
 const styles = theme => ({
     root: {
@@ -42,6 +43,7 @@ let ContactForm = ({ classes }) => (
             rows={5}
             multiline={true}
         />
+        <Button color={"primary"} variant={"contained"}>Send</Button>
     </form>
 );
 

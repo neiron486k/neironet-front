@@ -18,10 +18,10 @@ const Contact = ({ classes }) => (
     <div className={classes.root}>
         <Section title={"Contacts"}>
             <Grid container={true} spacing={8}>
-                <Grid item={true} sm={4}>1</Grid>
-                <Grid item={true} sm={4}>2</Grid>
+                <Grid item={true} sm={4}></Grid>
+                <Grid item={true} sm={4}></Grid>
                 <Grid item={true} sm={4}>
-                    <Typography align={"center"} variant={"h6"}>Оставить заявку</Typography>
+                    <Typography align={"center"} variant={"h6"}>Send request</Typography>
                     <ContactForm />
                 </Grid>
             </Grid>
