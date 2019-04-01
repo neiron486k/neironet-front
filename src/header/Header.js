@@ -74,8 +74,10 @@ const Header = ({ classes }) => {
                             <Typography variant={"caption"} color="inherit">Return result to profit</Typography>
                         </div>
                         <nav className={classes.nav}>
-                            <Button color="inherit">Service</Button>
                             <Button color="inherit">About</Button>
+                            <Button color="inherit">Works</Button>
+                            <Button color="inherit">Services</Button>
+                            <Button color="inherit">Reviews</Button>
                             <Button color="inherit">Contacts</Button>
                         </nav>
                     </Toolbar>
