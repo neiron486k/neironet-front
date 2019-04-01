@@ -21,7 +21,8 @@ const Section = ({classes, title, children }) => (
 
 Section.propTypes = {
     classes: PropTypes.object,
-    title: PropTypes.string
+    title: PropTypes.string,
+    children: PropTypes.any
 };
 
 export default withStyles(styles)(Section)

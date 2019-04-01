@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import withStyles from "@material-ui/core/styles/withStyles";
 import CardMedia from "@material-ui/core/CardMedia"
 import Toolbar from '@material-ui/core/Toolbar';
@@ -119,6 +120,10 @@ const Header = ({ classes }) => {
             </div>
         </CardMedia>
     )
+};
+
+Header.propTypes = {
+    classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(Header)

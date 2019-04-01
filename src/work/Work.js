@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Section from "../common/Section";
 import Slider from "react-slick";
@@ -93,6 +94,10 @@ const Work = ({ classes }) => {
             </Section>
         </div>
     )
-}
+};
+
+Work.propTypes = {
+    classes: PropTypes.object.isRequired
+};
 
 export default withStyles(styles)(Work)
