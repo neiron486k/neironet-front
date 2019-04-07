@@ -55,7 +55,12 @@ const Contact = ({ classes }) => (
                     </List>
                 </Grid>
                 <Grid item={true} sm={3}>
-                    <Typography align={"center"} variant={"h6"}>Send request</Typography>
+                    <Typography align={"center"} variant={"h6"}>
+                        <FormattedMessage
+                            id={"label.send_request"}
+                            defaultMessage={"Send request"}
+                        />
+                    </Typography>
                     <ContactForm />
                 </Grid>
             </Grid>

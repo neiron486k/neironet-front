@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles from "@material-ui/core/styles/withStyles"
 import Toolbar from '@material-ui/core/Toolbar';
 import { Typography } from "@material-ui/core";
+import { FormattedMessage } from "react-intl";
 
 const styles = theme => ({
     footer: {
@@ -14,7 +15,9 @@ const styles = theme => ({
 const Footer = ({ classes }) => (
     <footer className={classes.footer} color={"primary"}>
         <Toolbar variant={"dense"}>
-            <Typography color={"inherit"} variant={"body1"}>© PrimeAid 2019</Typography>
+            <Typography color={"inherit"} variant={"body1"}>
+                © <FormattedMessage id={"logo.primary.text"} defaultMessage={"PrimeAid"} /> 2019
+            </Typography>
         </Toolbar>
     </footer>
 );
