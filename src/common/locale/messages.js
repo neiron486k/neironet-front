@@ -1,16 +1,22 @@
 export default {
     en: {
-        'logo.primary_text': 'PrimeAid',
-        'logo.secondary_text': 'Return result to profit',
+        'logo.primary.text': 'PrimeAid',
+        'logo.secondary.text': 'Return result to profit',
     },
     ru: {
-        'logo.primary_text': 'ПраймЭйд',
-        'logo.secondary_text': 'Приведим к наилучшему результату',
-        'menu.home': 'Главная',
-        'menu.about': 'О нас',
-        'menu.work': 'Работы',
-        'menu.service': 'Услуги',
-        'menu.review': 'Отзывы',
-        'menu.contact': 'Контакты',
+        'logo.primary.text': 'ПраймЭйд',
+        'logo.secondary.text': 'Приведим к наилучшему результату',
+        'label.home': 'Главная',
+        'label.about': 'О нас',
+        'label.work': 'Работы',
+        'label.service': 'Услуги',
+        'label.review': 'Отзывы',
+        'label.contact': 'Контакты',
+        'jumbo.primary.text.developing': 'Программируем',
+        'jumbo.primary.text.administration': 'Администрируем',
+        'jumbo.primary.text.consultation': 'Консультируем',
+        'jumbo.secondary.text.consultation': 'технологии, хранение, итд...',
+        'jumbo.primary.text.guarantee': 'Гарантируем',
+        'jumbo.secondary.text.guarantee': 'качество, время',
     }
 }

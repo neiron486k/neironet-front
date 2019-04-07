@@ -64,7 +64,7 @@ const Menu = ({classes}) => {
                 >
                     <Button color="inherit">
                         <FormattedMessage
-                            id={'menu.' + item.id}
+                            id={'label.' + item.id}
                             defaultMessage={item.label}
                         />
                     </Button>

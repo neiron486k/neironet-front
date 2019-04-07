@@ -17,7 +17,7 @@ import Section from "../common/Section";
 import Menu from "./Menu";
 import PhoneIcon from '@material-ui/icons/Phone'
 import Lang from "./Lang";
-import {FormattedMessage} from "react-intl";
+import { FormattedMessage } from "react-intl";
 
 const styles = theme => ({
     root: {
@@ -92,13 +92,13 @@ const Header = ({ classes }) => {
                         <div className={classes.brand}>
                             <Typography variant={"h6"} color="inherit">
                                 <FormattedMessage
-                                    id={'logo.primary_text'}
+                                    id={'logo.primary.text'}
                                     defaultMessage={'PrimeAid'}
                                 />
                             </Typography>
                             <Typography variant={"caption"} color="inherit">
                                 <FormattedMessage
-                                    id={'logo.secondary_text'}
+                                    id={'logo.secondary.text'}
                                     defaultMessage={'Return result to profit'}
                                 />
                             </Typography>
@@ -124,7 +124,11 @@ const Header = ({ classes }) => {
                                     primary: classes.textPrimary,
                                     secondary: classes.textSecondary,
                                 }}
-                                primary="Developing"
+                                primary={
+                                    <FormattedMessage
+                                        id={'jumbo.primary.text.developing'}
+                                        defaultMessage={'Developing'}
+                                    />}
                                 secondary={"php, python, lua, nodejs, js..."}
                             />
                         </ListItem>
@@ -133,7 +137,11 @@ const Header = ({ classes }) => {
                                 <DoneIcon />
                             </ListItemIcon>
                             <ListItemText
-                                primary="Administration"
+                                primary={
+                                    <FormattedMessage
+                                        id={'jumbo.primary.text.administration'}
+                                        defaultMessage={'Administration'}
+                                    />}
                                 secondary={"unix, linux, windows, networks..."}
                                 classes={{
                                     primary: classes.textPrimary,
@@ -146,8 +154,18 @@ const Header = ({ classes }) => {
                                 <DoneIcon />
                             </ListItemIcon>
                             <ListItemText
-                                primary="Consultation"
-                                secondary={"technologies, storing, etc..."}
+                                primary={
+                                    <FormattedMessage
+                                        id={'jumbo.primary.text.consultation'}
+                                        defaultMessage={'Consultation'}
+                                    />
+                                }
+                                secondary={
+                                    <FormattedMessage
+                                        id={'jumbo.secondary.text.consultation'}
+                                        defaultMessage={'technologies, storing, etc...'}
+                                    />
+                                }
                                 classes={{
                                     primary: classes.textPrimary,
                                     secondary: classes.textSecondary,
@@ -159,8 +177,18 @@ const Header = ({ classes }) => {
                                 <DoneIcon />
                             </ListItemIcon>
                             <ListItemText
-                                primary="Guarantee"
-                                secondary={"quality, times"}
+                                primary={
+                                    <FormattedMessage
+                                        id={'jumbo.primary.text.guarantee'}
+                                        defaultMessage={'Guarantee'}
+                                    />
+                                }
+                                secondary={
+                                    <FormattedMessage
+                                        id={'jumbo.secondary.text.guarantee'}
+                                        defaultMessage={'quality, times'}
+                                    />
+                                }
                                 classes={{
                                     primary: classes.textPrimary,
                                     secondary: classes.textSecondary,
