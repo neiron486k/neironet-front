@@ -16,6 +16,7 @@ import green from '@material-ui/core/colors/green'
 import Section from "../common/Section";
 import Menu from "./Menu";
 import PhoneIcon from '@material-ui/icons/Phone'
+import Lang from "./Lang";
 
 const styles = theme => ({
     root: {
@@ -100,6 +101,7 @@ const Header = ({ classes }) => {
                             </a>
                         </Typography>
                         <Menu />
+                        <Lang />
                     </Toolbar>
                 </AppBar>
                 <Section className={classes.container}>

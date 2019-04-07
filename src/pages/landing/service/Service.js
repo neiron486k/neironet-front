@@ -66,8 +66,8 @@ const Service = ({ classes }) => (
         <Section title={"Service"}>
             <Grid container={true} spacing={8} justify={"center"} alignItems={"stretch"}>
                 {services.map((item, index) => (
-                    <Grid item={true} xs={12} md={3}>
-                        <Card className={classes.card} key={index}>
+                    <Grid item={true} xs={12} md={3} key={index}>
+                        <Card className={classes.card}>
                             <CardMedia
                                 image={item.image}
                                 className={classes.media}

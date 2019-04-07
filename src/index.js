@@ -12,6 +12,10 @@ import { Provider } from "react-redux"
 import store from "./app/store";
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import theme from "./app/theme"
+import { setLocale, detectLocale } from "./common/locale/localeOperation";
+
+const lang = detectLocale();
+store.dispatch(setLocale(lang));
 
 ReactDOM.render(
     <Provider store={store}>
