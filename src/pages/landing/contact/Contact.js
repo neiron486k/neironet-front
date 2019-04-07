@@ -57,8 +57,7 @@ const Contact = ({ classes }) => (
                 <Grid item={true} sm={3}>
                     <Typography align={"center"} variant={"h6"}>
                         <FormattedMessage
-                            id={"label.send_request"}
-                            defaultMessage={"Send request"}
+                            id={"label.request_call"}
                         />
                     </Typography>
                     <ContactForm />

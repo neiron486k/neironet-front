@@ -2,7 +2,8 @@ export default {
     en: {
         'logo.primary.text': 'PrimeAid',
         'logo.secondary.text': 'Return result to profit',
-        'about.text': 'We are high qualified team in web development witch will be care about all technical features, that you would be concentrate on your affairs'
+        'about.text': 'We are high qualified team in web development witch will be care about all technical features, that you would be concentrate on your affairs',
+        'label.request_call': 'Request call'
     },
     ru: {
         'logo.primary.text': 'ПраймЭйд',
@@ -17,7 +18,7 @@ export default {
         'label.phone': 'Телефон',
         'label.description': 'Описание',
         'label.send': 'Отправить',
-        'label.send_request': 'Отправить запрос',
+        'label.request_call': 'Заказать звонок',
         'about.text': 'Мы - высококвалифицированная команда в веб разработке, которая позаботится обо всех технических особенностях, чтобы вы были сосредоточены на своих делах',
         'jumbo.primary.text.developing': 'Программируем',
         'jumbo.primary.text.administration': 'Администрируем',
