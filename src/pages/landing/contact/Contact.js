@@ -26,7 +26,7 @@ const Contact = ({ classes }) => (
     <div className={classes.root} id={"contact"}>
         <Section title={<FormattedMessage id={"label.contact"} defaultMessage={"Contacts"} />}>
             <Grid container={true} spacing={8} justify={"center"}>
-                <Grid item={true} sm={3}>
+                <Grid item={true} md={3} xs={12}>
                     <List className={classes.root}>
                         <ListItemLink href={"tel:+79213594494"}>
                             <Avatar>
@@ -54,7 +54,7 @@ const Contact = ({ classes }) => (
                         </ListItem>
                     </List>
                 </Grid>
-                <Grid item={true} sm={3}>
+                <Grid item={true} md={3} xs={12}>
                     <Typography align={"center"} variant={"h6"}>
                         <FormattedMessage
                             id={"label.request_call"}
