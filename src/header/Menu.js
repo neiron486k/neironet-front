@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Link } from 'react-scroll'
 import { Button } from "@material-ui/core";
+import { FormattedMessage } from "react-intl";
 
 const styles = theme => ({
     root: {},
@@ -61,7 +62,12 @@ const Menu = ({classes}) => {
                     key={index}
                     variant={"Button"}
                 >
-                    <Button color="inherit">{item.label}</Button>
+                    <Button color="inherit">
+                        <FormattedMessage
+                            id={'menu.' + item.id}
+                            defaultMessage={item.label}
+                        />
+                    </Button>
                 </Link>
             ))}
         </nav>

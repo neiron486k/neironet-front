@@ -17,6 +17,7 @@ import Section from "../common/Section";
 import Menu from "./Menu";
 import PhoneIcon from '@material-ui/icons/Phone'
 import Lang from "./Lang";
+import {FormattedMessage} from "react-intl";
 
 const styles = theme => ({
     root: {
@@ -91,8 +92,18 @@ const Header = ({ classes }) => {
                             title={'logo'}
                         />
                         <div className={classes.brand}>
-                            <Typography variant={"h6"} color="inherit">PrimeAid</Typography>
-                            <Typography variant={"caption"} color="inherit">Return result to profit</Typography>
+                            <Typography variant={"h6"} color="inherit">
+                                <FormattedMessage
+                                    id={'logo.primary_text'}
+                                    defaultMessage={'PrimeAid'}
+                                />
+                            </Typography>
+                            <Typography variant={"caption"} color="inherit">
+                                <FormattedMessage
+                                    id={'logo.secondary_text'}
+                                    defaultMessage={'Return result to profit'}
+                                />
+                            </Typography>
                         </div>
                         <Typography color="inherit" variant={"body1"} className={classes.phone}>
                             <PhoneIcon className={classes.phoneIcon} />

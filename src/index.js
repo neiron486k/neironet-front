@@ -13,6 +13,10 @@ import store from "./app/store";
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import theme from "./app/theme"
 import { setLocale, detectLocale } from "./common/locale/localeOperation";
+import { addLocaleData } from 'react-intl'
+import en from 'react-intl/locale-data/en';
+import ru from 'react-intl/locale-data/ru';
+addLocaleData([...en, ...ru]);
 
 const lang = detectLocale();
 store.dispatch(setLocale(lang));
