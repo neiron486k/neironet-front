@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Link } from 'react-scroll'
 import { Button } from "@material-ui/core";
 import { FormattedMessage } from "react-intl";
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
+import Drawer from '@material-ui/core/Drawer';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 
 const styles = theme => ({
     root: {},
@@ -47,35 +54,84 @@ const menuItems = [
     }
 ];
 
-const Menu = ({classes}) => {
+const Menu = ({ classes, width }) => {
+    const [open, setOpen] = useState(false);
+    const toggleDrawer = () => {
+        setOpen(!open)
+    };
+
     return (
         <nav className={classes.root}>
-            {menuItems.map((item, index) => (
-                <Link
-                    activeClass={classes.active}
-                    to={item.id}
-                    spy={true}
-                    hashSpy={true}
-                    smooth={true}
-                    offset={item.offset}
-                    duration={500}
-                    key={index}
-                    variant={"Button"}
-                >
-                    <Button color="inherit">
-                        <FormattedMessage
-                            id={'label.' + item.id}
-                            defaultMessage={item.label}
-                        />
-                    </Button>
-                </Link>
-            ))}
+            {isWidthUp('md', width) ? (
+                <div>
+                    {menuItems.map((item, index) => (
+                        <Link
+                            activeClass={classes.active}
+                            to={item.id}
+                            spy={true}
+                            hashSpy={true}
+                            smooth={true}
+                            offset={item.offset}
+                            duration={500}
+                            key={index}
+                            variant={"Button"}
+                        >
+                            <Button color="inherit">
+                                <FormattedMessage
+                                    id={'label.' + item.id}
+                                    defaultMessage={item.label}
+                                />
+                            </Button>
+                        </Link>
+                    ))}
+                </div>
+            ) : (
+                <div>
+                    <IconButton color="inherit" onClick={toggleDrawer}>
+                        <MenuIcon />
+                    </IconButton>
+                    <Drawer
+                        open={open}
+                        onClose={toggleDrawer}
+                        anchor={"top"}
+                    >
+                        <List>
+                            {menuItems.map((item, index) =>
+                                <Link
+                                    to={item.id}
+                                    spy={true}
+                                    hashSpy={true}
+                                    smooth={true}
+                                    offset={item.offset}
+                                    duration={500}
+                                    key={index}
+                                    variant={"Button"}
+                                >
+                                    <ListItem button={true} key={index}>
+                                        <ListItemText
+                                            primary={
+                                                <FormattedMessage
+                                                    id={'label.' + item.id}
+                                                    defaultMessage={item.label}
+                                                />
+                                            }
+                                            onClick={toggleDrawer}
+                                        />
+                                    </ListItem>
+                                </Link>
+                            )}
+                        </List>
+                    </Drawer>
+                </div>
+            )
+            }
         </nav>
     )
 };
 
 Menu.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    width: PropTypes.string.isRequired
 };
 
-export default withStyles(styles)(Menu)
+export default withWidth()(withStyles(styles)(Menu))

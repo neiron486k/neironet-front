@@ -18,6 +18,7 @@ import Menu from "./Menu";
 import PhoneIcon from '@material-ui/icons/Phone'
 import Lang from "./Lang";
 import { FormattedMessage } from "react-intl";
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 
 const styles = theme => ({
     root: {
@@ -75,7 +76,7 @@ const styles = theme => ({
     }
 });
 
-const Header = ({ classes }) => {
+const Header = ({ classes, width }) => {
     return (
         <CardMedia
             image={background}
@@ -96,19 +97,23 @@ const Header = ({ classes }) => {
                                     defaultMessage={'PrimeAid'}
                                 />
                             </Typography>
+                            {isWidthUp('lg', width) &&
                             <Typography variant={"caption"} color="inherit">
                                 <FormattedMessage
                                     id={'logo.secondary.text'}
                                     defaultMessage={'Return result to profit'}
                                 />
                             </Typography>
+                            }
                         </div>
+                        {isWidthUp('sm', width) &&
                         <Typography color="inherit" variant={"body1"} className={classes.phone}>
                             <PhoneIcon className={classes.phoneIcon} />
                             <a href="tel:+79213594494" className={classes.a} color={"inherit"}>
                                 +7 (921) 359-44-94
                             </a>
                         </Typography>
+                        }
                         <Menu />
                         <Lang />
                     </Toolbar>
@@ -206,4 +211,4 @@ Header.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Header)
+export default withWidth()(withStyles(styles)(Header))
