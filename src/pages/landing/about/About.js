@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import withStyles from '@material-ui/core/styles/withStyles';
 import Section from "../../../common/Section";
 import { Typography } from "@material-ui/core";
+import { FormattedMessage } from "react-intl";
 
 const styles = theme => ({
     root: {
@@ -14,8 +15,7 @@ const About = ({ classes }) => (
     <div className={classes.root} id={"about"}>
         <Section>
             <Typography variant={"h6"} component={"h2"} align={"center"}>
-                Мы - восококвалифицированная команда в области веб разработок, которая позаботиться обо всех сложных
-                технических деталях, чтобы вы смогли сосредоточиться на важных для вас вещах.
+               <FormattedMessage id={"about.text"} />
             </Typography>
         </Section>
     </div>
