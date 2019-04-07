@@ -80,7 +80,6 @@ const Header = ({ classes }) => {
         <CardMedia
             image={background}
             className={classes.root}
-            title={'background'}
             id={"home"}
         >
             <div className={classes.dotted}>
@@ -89,7 +88,6 @@ const Header = ({ classes }) => {
                         <CardMedia
                             image={logo}
                             className={classes.logo}
-                            title={'logo'}
                         />
                         <div className={classes.brand}>
                             <Typography variant={"h6"} color="inherit">

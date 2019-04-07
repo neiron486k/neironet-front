@@ -1,21 +1,24 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import withStyles from "@material-ui/core/styles/withStyles";
-import { Button } from "@material-ui/core";
 import { setLocale } from "../common/locale/localeOperation";
 import { connect } from "react-redux";
+import ru from "./images/ru.png"
+import en from "./images/en.png"
 
 const styles = theme => ({
    root: {
-       color: theme.palette.common.white
+       color: theme.palette.common.white,
+       margin: theme.spacing.unit,
+       cursor: 'pointer'
    }
 });
 
 const Lang = ({classes, setLang}) => {
     return (
         <div className={classes.root}>
-            <Button color={"inherit"} onClick={() => setLang('ru')}>Ru</Button>
-            <Button color={"inherit"} onClick={() => setLang('en')}>En</Button>
+            <img src={ru} alt="ru" onClick={() => setLang('ru')} />
+            <img src={en} alt="en" onClick={() => setLang('en')} />
         </div>
     )
 };
@@ -26,8 +29,8 @@ Lang.propTypes = {
 };
 
 const mapStateToProps = state => ({});
-const mapDispatchToProps = dispath => ({
-    setLang: lang => dispath(setLocale(lang))
+const mapDispatchToProps = dispatch => ({
+    setLang: lang => dispatch(setLocale(lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(Lang));
