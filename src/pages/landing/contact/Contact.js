@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from "@material-ui/core/styles/withStyles"
-import Section from "../common/Section";
+import Section from "../../../common/Section";
 import ContactForm from "./ContactForm";
 import { Grid, Typography } from '@material-ui/core'
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Avatar from '@material-ui/core/Avatar';
+import List from '@material-ui/core/List/index';
+import ListItem from '@material-ui/core/ListItem/index';
+import ListItemText from '@material-ui/core/ListItemText/index';
+import Avatar from '@material-ui/core/Avatar/index';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSkype, faTelegram } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome/index'
+import { faSkype, faTelegram } from '@fortawesome/free-brands-svg-icons/index'
 
 const styles = theme => ({
     root: {

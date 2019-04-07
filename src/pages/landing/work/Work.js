@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
-import Section from "../common/Section";
-import Slider from "react-slick";
-import CardMedia from '@material-ui/core/CardMedia';
-import Card from '@material-ui/core/Card';
+import Section from "../../../common/Section";
+import Slider from "react-slick/lib";
+import CardMedia from '@material-ui/core/CardMedia/index';
+import Card from '@material-ui/core/Card/index';
 import { Typography } from "@material-ui/core";
 
 const slides = [

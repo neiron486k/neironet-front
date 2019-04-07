@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import withStyles from '@material-ui/core/styles/withStyles'
-import Section from "../common/Section"
+import Section from "../../../common/Section"
 import { Avatar, CardHeader, Typography } from "@material-ui/core";
-import Divider from '@material-ui/core/Divider';
+import Divider from '@material-ui/core/Divider/index';
 
 const styles = theme => ({
     root: {},

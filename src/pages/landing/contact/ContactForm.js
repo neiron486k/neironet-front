@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from "@material-ui/core/styles/withStyles"
 import { Field, reduxForm } from 'redux-form'
-import renderTextField from '../utils/renderTextField';
+import renderTextField from '../../../utils/renderTextField';
 import { Button } from "@material-ui/core";
 
 const styles = theme => ({
