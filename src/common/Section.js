@@ -22,7 +22,7 @@ const Section = ({classes, title, children, className }) => (
 
 Section.propTypes = {
     classes: PropTypes.object,
-    title: PropTypes.string,
+    title: PropTypes.any,
     children: PropTypes.any,
     className: PropTypes.string
 };

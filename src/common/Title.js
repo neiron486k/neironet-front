@@ -24,7 +24,7 @@ const Title = ({classes, title}) => (
 
 Title.propTypes = {
     classes: PropTypes.object,
-    title: PropTypes.string.isRequired
+    title: PropTypes.any.isRequired
 };
 
 export default withStyles(styles)(Title)

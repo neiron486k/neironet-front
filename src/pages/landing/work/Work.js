@@ -6,6 +6,7 @@ import Slider from "react-slick/lib";
 import CardMedia from '@material-ui/core/CardMedia/index';
 import Card from '@material-ui/core/Card/index';
 import { Typography } from "@material-ui/core";
+import { FormattedMessage } from "react-intl";
 
 const slides = [
     {
@@ -31,8 +32,7 @@ const slides = [
 ];
 
 const styles = theme => ({
-    root: {
-    },
+    root: {},
     section: {
         paddingBottom: theme.spacing.unit * 4
     },
@@ -70,7 +70,7 @@ const Work = ({ classes }) => {
 
     return (
         <div className={classes.root} id={"work"}>
-            <Section title={'Work'} className={classes.section}>
+            <Section title={<FormattedMessage id={"label.work"} defaultMessage={"Work"} />} className={classes.section}>
                 <Slider {...settings}>
                     {slides.map((item, index) => {
                         return (
