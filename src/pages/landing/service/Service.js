@@ -64,7 +64,7 @@ const services = [
 
 const Service = ({ classes }) => (
     <div className={classes.root} id={"service"}>
-        <Section title={<FormattedMessage id={"label.service"} defaultMessage={"Service"} />} className={classes.section}>
+        <Section title={<FormattedMessage id={"label.service"} defaultMessage={"Service"} />}>
             <Grid container={true} spacing={8} justify={"center"} alignItems={"stretch"}>
                 {services.map((item, index) => (
                     <Grid item={true} xs={12} md={3} key={index}>

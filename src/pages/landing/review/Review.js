@@ -4,6 +4,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import Section from "../../../common/Section"
 import { Avatar, CardHeader, Typography } from "@material-ui/core";
 import Divider from '@material-ui/core/Divider/index';
+import { FormattedMessage } from "react-intl";
 
 const styles = theme => ({
     root: {},
@@ -45,7 +46,7 @@ const reviews = [
 
 const Review = ({ classes }) => (
     <div className={classes.root} id={"review"}>
-        <Section title={"Review"}>
+        <Section title={<FormattedMessage id={"label.review"} defaultMessage={"Review"} />}>
             {reviews.map((item, index) => (
                 <div key={index}>
                     <CardHeader

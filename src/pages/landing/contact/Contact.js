@@ -12,6 +12,7 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome/index'
 import { faSkype, faTelegram } from '@fortawesome/free-brands-svg-icons/index'
+import { FormattedMessage } from "react-intl";
 
 const styles = theme => ({
     root: {
@@ -23,7 +24,7 @@ const ListItemLink = props => <ListItem component="a" {...props} />;
 
 const Contact = ({ classes }) => (
     <div className={classes.root} id={"contact"}>
-        <Section title={"Contacts"}>
+        <Section title={<FormattedMessage id={"label.contact"} defaultMessage={"Contacts"} />}>
             <Grid container={true} spacing={8} justify={"center"}>
                 <Grid item={true} sm={3}>
                     <List className={classes.root}>
