@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Section from "../../../common/Section";
@@ -7,29 +7,8 @@ import CardMedia from '@material-ui/core/CardMedia/index';
 import Card from '@material-ui/core/Card/index';
 import { Typography } from "@material-ui/core";
 import { FormattedMessage } from "react-intl";
-
-const slides = [
-    {
-        image: 'https://avatars.mds.yandex.net/get-pdb/49816/167fbefc-4bc6-4ca1-805c-69d08b200400/s1200',
-        text: 'Cat',
-    },
-    {
-        image: 'https://avatars.mds.yandex.net/get-pdb/49816/167fbefc-4bc6-4ca1-805c-69d08b200400/s1200',
-        text: 'Awesome cat',
-    },
-    {
-        image: 'https://avatars.mds.yandex.net/get-pdb/49816/167fbefc-4bc6-4ca1-805c-69d08b200400/s1200',
-        text: 'Pretty cat',
-    },
-    {
-        image: 'https://avatars.mds.yandex.net/get-pdb/49816/167fbefc-4bc6-4ca1-805c-69d08b200400/s1200',
-        text: 'Cat',
-    },
-    {
-        image: 'https://avatars.mds.yandex.net/get-pdb/49816/167fbefc-4bc6-4ca1-805c-69d08b200400/s1200',
-        text: 'Cat',
-    },
-];
+import { getWorks } from "./workOperation";
+import { connect } from "react-redux";
 
 const styles = theme => ({
     root: {},
@@ -56,7 +35,7 @@ const styles = theme => ({
     },
 });
 
-const Work = ({ classes }) => {
+const Work = ({ classes, works, fetchWorks, lang }) => {
     const settings = {
         dots: true,
         arrows: false,
@@ -88,22 +67,26 @@ const Work = ({ classes }) => {
         ],
     };
 
+    useEffect(() => {
+        fetchWorks();
+    }, [lang]);
+
     return (
         <div className={classes.root} id={"work"}>
             <Section title={<FormattedMessage id={"label.work"} defaultMessage={"Work"} />} className={classes.section}>
                 <Slider {...settings}>
-                    {slides.map((item, index) => {
+                    {works.map((item, index) => {
                         return (
                             <div key={index} className={classes.wrapper}>
                                 <Card>
                                     <CardMedia
-                                        title={'image'}
-                                        image={item.image}
+                                        title={item.title}
+                                        image={item.cover}
                                         className={classes.cardMedia}
                                     >
                                         <div className={classes.content}>
                                             <Typography variant={"body1"} color={"inherit"} align={"center"}>
-                                                {item.text}
+                                                {item.title}
                                             </Typography>
                                         </div>
                                     </CardMedia>
@@ -118,7 +101,17 @@ const Work = ({ classes }) => {
 };
 
 Work.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    fetchWorks: PropTypes.func.isRequired,
+    works: PropTypes.array.isRequired,
 };
 
-export default withStyles(styles)(Work)
+const mapStateToProps = state => ({
+    lang: state.locale.lang,
+    works: state.work.works
+});
+const mapDispatchToProps = dispatch => ({
+    fetchWorks: () => dispatch(getWorks())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(Work))

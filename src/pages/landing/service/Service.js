@@ -34,10 +34,10 @@ const styles = theme => ({
     }
 });
 
-const Service = ({ classes, services, fetchServices }) => {
+const Service = ({ classes, services, fetchServices, lang }) => {
     useEffect(() => {
         fetchServices();
-    }, []);
+    }, [lang]);
 
     return (
         <div className={classes.root} id={"service"}>
@@ -76,11 +76,13 @@ const Service = ({ classes, services, fetchServices }) => {
 Service.propTypes = {
     classes: PropTypes.object.isRequired,
     services: PropTypes.array.isRequired,
-    fetchServices: PropTypes.func.isRequired
+    fetchServices: PropTypes.func.isRequired,
+    lang: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = state => ({
-    'services': state.service.services
+    'services': state.service.services,
+    'lang': state.locale.lang
 });
 const mapDispatchToProps = dispatch => ({
     fetchServices: () => dispatch(getServices())

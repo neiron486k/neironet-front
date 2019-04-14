@@ -1,9 +1,11 @@
 import { setLocaleAction } from "./localeAction";
+import { setLanguage } from "../../utils/axios";
 
 export const setLocale = lang => {
     return dispatch => {
         dispatch(setLocaleAction(lang));
-        localStorage.setItem('i18nLang', lang)
+        localStorage.setItem('i18nLang', lang);
+        setLanguage(lang);
     }
 };
 
