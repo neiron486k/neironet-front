@@ -59,9 +59,11 @@ const Service = ({ classes, services, fetchServices, lang }) => {
                                         >
                                             {item.title}
                                         </Typography>
-                                        <Typography variant={"body2"} color={"inherit"}>
-                                            {item.description}
-                                        </Typography>
+                                        <Typography
+                                            variant={"body2"}
+                                            color={"inherit"}
+                                            dangerouslySetInnerHTML={{__html: item.description}}
+                                        />
                                     </CardContent>
                                 </CardMedia>
                             </Card>

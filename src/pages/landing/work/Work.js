@@ -21,7 +21,8 @@ const styles = theme => ({
     cardMedia: {
         width: '100%',
         height: 250,
-        position: 'relative'
+        position: 'relative',
+
     },
     content: {
         background: 'rgba(0, 0, 0, 1)',
