@@ -40,6 +40,6 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = state => ({lang: state.locale.lang});
+const mapStateToProps = state => ({ lang: state.locale.lang });
 
 export default connect(mapStateToProps)(withStyle(styles)(App));

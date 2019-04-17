@@ -1,12 +1,16 @@
 export default {
     en: {
-        'logo.primary.text': 'PrimeAid',
+        'app.title': 'Creating startups, sites, administration, support, consultation, consulting',
+        'app.description': '"We are working with physical and legal persons',
+        'logo.primary.text': 'NEIRONET',
         'logo.secondary.text': 'Return result to profit',
         'about.text': 'We are high qualified team in web development witch will be care about all technical features, that you would be concentrate on your affairs',
         'label.request_call': 'Request call'
     },
     ru: {
-        'logo.primary.text': 'ПраймЭйд',
+        'app.title': 'Создание стартапов, сайтов под ключ, администрирование, поддержка, консультация, консалтинг',
+        'app.description': '"Работаем с физическими и юридическими лицами',
+        'logo.primary.text': 'NEIRONET',
         'logo.secondary.text': 'Приведём к наилучшему результату',
         'label.home': 'Главная',
         'label.about': 'О нас',

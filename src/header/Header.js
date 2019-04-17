@@ -19,6 +19,8 @@ import PhoneIcon from '@material-ui/icons/Phone'
 import Lang from "./Lang";
 import { FormattedMessage } from "react-intl";
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
+import { Helmet } from "react-helmet";
+import { injectIntl } from "react-intl";
 
 const styles = theme => ({
     root: {
@@ -76,13 +78,20 @@ const styles = theme => ({
     }
 });
 
-const Header = ({ classes, width }) => {
+const Header = ({ classes, width, intl }) => {
     return (
         <CardMedia
             image={background}
             className={classes.root}
             id={"home"}
         >
+            <Helmet
+                titleTemplate="%s - NEIRONET"
+            >
+                <title>{intl.formatMessage({id: 'app.title'})}</title>
+                <meta property="og:title" content={intl.formatMessage({id: 'app.title'})} />
+                <meta property="og:description" content={intl.formatMessage({id: 'app.description'})} />
+            </Helmet>
             <div className={classes.dotted}>
                 <AppBar position={'fixed'} elevation={0} className={classes.appBar}>
                     <Toolbar variant={"regular"}>
@@ -94,7 +103,6 @@ const Header = ({ classes, width }) => {
                             <Typography variant={"h6"} color="inherit">
                                 <FormattedMessage
                                     id={'logo.primary.text'}
-                                    defaultMessage={'PrimeAid'}
                                 />
                             </Typography>
                             {isWidthUp('lg', width) &&
@@ -211,4 +219,4 @@ Header.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default withWidth()(withStyles(styles)(Header))
+export default injectIntl(withWidth()(withStyles(styles)(Header)))
