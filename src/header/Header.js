@@ -216,7 +216,9 @@ const Header = ({ classes, width, intl }) => {
 };
 
 Header.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    intl: PropTypes.object.isRequired,
+    width: PropTypes.string.isRequired,
 };
 
 export default injectIntl(withWidth()(withStyles(styles)(Header)))

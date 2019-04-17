@@ -25,32 +25,38 @@ const menuItems = [
     {
         id: 'home',
         label: 'home',
-        offset: -60
+        offset: -60,
+        hash: false
     },
     {
         id: 'about',
         label: 'about',
-        offset: -60
+        offset: -60,
+        hash: true
     },
     {
         id: 'work',
         label: 'works',
         offset: -60,
+        hash: true
     },
     {
         id: 'service',
         label: 'services',
         offset: -60,
+        hash: true
     },
     {
         id: 'review',
         label: 'reviews',
         offset: -60,
+        hash: true
     },
     {
         id: 'contact',
         label: 'contacts',
         offset: -60,
+        hash: true
     }
 ];
 
@@ -69,8 +75,8 @@ const Menu = ({ classes, width }) => {
                             activeClass={classes.active}
                             to={item.id}
                             spy={true}
-                            hashSpy={true}
                             smooth={true}
+                            hashSpy={item.hash}
                             offset={item.offset}
                             duration={500}
                             key={index}
@@ -100,8 +106,8 @@ const Menu = ({ classes, width }) => {
                                 <Link
                                     to={item.id}
                                     spy={true}
-                                    hashSpy={true}
                                     smooth={true}
+                                    hashSpy={item.hash}
                                     offset={item.offset}
                                     duration={500}
                                     key={index}
