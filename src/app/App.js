@@ -11,6 +11,7 @@ import Contact from "../pages/landing/contact/Contact";
 import { IntlProvider } from "react-intl";
 import messages from '../common/locale/messages'
 import { connect } from "react-redux";
+import Snackbar from "../common/snackbar/Snackbar";
 
 const styles = theme => ({
     '@global': {
@@ -34,6 +35,7 @@ class App extends Component {
                     <Review />
                     <Contact />
                     <Footer />
+                    <Snackbar />
                 </div>
             </IntlProvider>
         );
