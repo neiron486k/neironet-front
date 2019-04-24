@@ -2,7 +2,8 @@ import { CLOSE_SNACKBAR, OPEN_SNACKBAR } from "./snackbarAction";
 
 const initState = {
     open: false,
-    message: ''
+    message: '',
+    variant: 'default'
 };
 
 const snackbarReducer = (state = initState, action) => {
@@ -10,7 +11,8 @@ const snackbarReducer = (state = initState, action) => {
         case OPEN_SNACKBAR:
             return {
                 open: true,
-                message: action.message
+                message: action.message,
+                variant: action.variant || state.variant,
             };
         case CLOSE_SNACKBAR:
             return {

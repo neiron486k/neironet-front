@@ -7,7 +7,7 @@ export const requestToFeedback = values => {
         try {
             const response = await sendFeedbackRequest(values);
             const message = response.data;
-            dispatch(openSnackbar(message));
+            dispatch(openSnackbar(message, 'success'));
             dispatch(reset('contactForm'));
         } catch (e) {
             const errors = e.response.data.errors;
