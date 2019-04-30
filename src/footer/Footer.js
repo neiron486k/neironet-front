@@ -16,7 +16,7 @@ const Footer = ({ classes }) => (
     <footer className={classes.footer} color={"primary"}>
         <Toolbar variant={"dense"}>
             <Typography color={"inherit"} variant={"body1"}>
-                © <FormattedMessage id={"logo.primary.text"} defaultMessage={"NEIRONET"} /> 2019
+                © <FormattedMessage id={"logo.primary.text"} defaultMessage={"NEIRONET"} /> 2017 - 2019
             </Typography>
         </Toolbar>
     </footer>
