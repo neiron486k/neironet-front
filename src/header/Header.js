@@ -141,7 +141,7 @@ const Header = ({ classes, width, intl }) => {
                                         id={'jumbo.primary.text.developing'}
                                         defaultMessage={'Developing'}
                                     />}
-                                secondary={"php, python, lua, nodejs, js..."}
+                                secondary={"php, react, redux, js, python..."}
                             />
                         </ListItem>
                         <ListItem>
